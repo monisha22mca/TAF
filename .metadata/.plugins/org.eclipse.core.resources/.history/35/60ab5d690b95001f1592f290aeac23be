@@ -1,0 +1,5 @@
+package com.myproj.pageobjects;
+
+public class HomePage {
+
+}

@@ -1,0 +1,5 @@
+package com.myproj.base;
+
+public class BaseClass {
+
+}

@@ -1,0 +1,27 @@
+package com.myproj.base;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.testng.annotations.BeforeTest;
+
+public class BaseClass {
+	
+	@BeforeTest
+	public void loadConfig()
+	{
+		try 
+		{
+		prop = new Properties();
+		FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir", "\\ConfigFiles\\config.properties"));
+		prop.load(fileInputStream);
+		}catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
