@@ -7,15 +7,11 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
-import com.myproj.browseraction.BrowserAction;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -70,6 +66,7 @@ public class BaseClass {
 	public void tearDown()
 	{
 		driver.quit();
+		System.out.println("Tear Down Successfully");
 	}
 
 		

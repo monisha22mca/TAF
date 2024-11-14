@@ -9,8 +9,8 @@ import com.myproj.browseraction.BrowserAction;
 
 public class HomePage extends BaseClass {
 	
-	@FindBy(xpath = "//a[@data-nav-role = 'signin'][@data-csa-c-type = 'link']")
-	WebElement signIn;
+	@FindBy(xpath = "//a[contains(@href, 'register')]")
+	WebElement registerLink;
 	
 	
 	public HomePage()
@@ -18,10 +18,10 @@ public class HomePage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 
-	public LoginPage signInButton()
+	public void clickRegister() throws Throwable
 	{
-		BrowserAction.click(driver, signIn);
-		return new LoginPage();
+		BrowserAction.click(driver, registerLink);
+		System.out.println("Click Register link");
 		
 	}
 }
