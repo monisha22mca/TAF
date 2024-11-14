@@ -34,7 +34,7 @@ public class ExcelUtils {
                 while (cells.hasNext()) {
                     Cell cell = cells.next();
                     switch (cell.getCellType()) {
-                        case STRING:
+                        case STRING: //string case
                             System.out.print(cell.getStringCellValue() + "\t");
                             break;
                         case NUMERIC:
