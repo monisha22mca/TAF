@@ -1,6 +1,7 @@
 package com.myproj.excelutils; // Update the package name as per your project structure
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -11,7 +12,7 @@ import java.util.Iterator;
 
 public class ExcelUtils {
 
-    // Method to read Excel data
+    // Method to read Excel data sample
     public void readExcelData(String filePath, String sheetName) {
         try (FileInputStream fis = new FileInputStream(filePath);
              Workbook workbook = new HSSFWorkbook (fis)) {  // Opens the workbook
